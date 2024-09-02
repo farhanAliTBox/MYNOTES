@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    tools:context=".AddNoteActivity"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:layout_margin="0dp"
+        app:buttonGravity="center_vertical"
+        app:titleTextColor="@android:color/black"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:id="@+id/addNoteBack"/>
+
+        <TextView
+            android:id="@+id/toolbar_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD NOTES"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_gravity="center" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+<!-- Note Container with Icons -->
+<RelativeLayout
+    android:id="@+id/rl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/note_background"
+    android:elevation="2dp"
+    android:padding="16dp"
+    android:layout_below="@id/toolbar1">
+
+    <!-- Title -->
+
+    <!-- Menu Icons (Edit and Delete) -->
+    <EditText
+        android:id="@+id/note_title_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:hint="Title"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Note Content -->
+    <EditText
+        android:id="@+id/note_description_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_title_input"
+        android:layout_marginTop="10dp"
+        android:enabled="true"
+        android:gravity="top"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:minHeight="300dp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/note_date_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_description_input"
+        android:enabled="false"
+        android:hint="Date  DD-MM-YYYY"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
+<!-- Done Button -->
+<Button
+    android:id="@+id/save_note_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/rl"
+    android:layout_marginTop="30dp"
+    android:text="Done"
+    android:textColor="@android:color/white"
+    android:backgroundTint="@color/theme_color"/>
+
+<Button
+    android:id="@+id/delete_note_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/save_note_button"
+    android:text="Cancel"
+    android:textColor="@android:color/white"
+    android:backgroundTint="@color/theme_color"/>
+
+</RelativeLayout>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Shadow effect only on the bottom -->
+    <item android:bottom="4dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="0dp"/> <!-- No rounded corners -->
+            <padding android:bottom="8dp"/> <!-- Shadow height -->
+        </shape>
+    </item>
+
+    <!-- Toolbar background color -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white"/>
+        </shape>
+    </item>
+
+</layer-list>
