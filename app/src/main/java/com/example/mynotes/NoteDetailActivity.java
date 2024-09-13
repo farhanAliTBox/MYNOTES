@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
+import jdk.internal.org.jline.utils.Log;
+
 public class NoteDetailActivity extends AppCompatActivity {
 
     private EditText noteTitleEditText, noteDescriptionEditText, noteDateEditText;
@@ -20,7 +22,7 @@ public class NoteDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_detail);
-
+        Log.debug();
         noteTitleEditText = findViewById(R.id.note_title_edit_text);
         noteDescriptionEditText = findViewById(R.id.note_description_edit_text);
         noteDateEditText = findViewById(R.id.note_date_edit_text);
